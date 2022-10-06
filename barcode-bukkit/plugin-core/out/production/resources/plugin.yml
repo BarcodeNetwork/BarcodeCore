@@ -1,0 +1,23 @@
+name: BarcodeCore
+version: 0.6.0
+main: com.vjh0107.barcode.core.BarcodeCorePlugin
+author: vjh0107
+website: http://github.com/vjh0107
+depend:
+ - BarcodeFramework
+ - ProtocolLib
+ - PlaceholderAPI
+ - MagicSpells
+ - MythicMobs
+ - MMOCore
+ - MMOItems
+ - BetonQuest
+ - TAB
+ - GPS
+ - Skript
+ - BarcodeCutscene
+ - CommandAPI
+ - Sentinel
+ - Citizens
+ - ModelEngine
+api-version: 1.18

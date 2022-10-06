@@ -1,0 +1,44 @@
+
+# Display options
+name: Fishing
+
+# Experience given to the main level
+# when leveling up this profession
+experience:
+    base: 20
+    per-level: 3
+
+# Must match an existing exp curve filename from the 'expcurves' folder
+exp-curve: levels
+
+exp-sources: {}
+
+# Fishing drop tables which override MC default.
+# When fishing, the plugin reads through all the drop tables
+# and picks THE first one which all conditions are met!!
+# You must put at first place the drop tables which
+# have the most conditions/which are the most important.
+# Number of tugs = number of times you need to click to fish.
+on-fish:
+    overriding-drop-table:
+        conditions:
+        - 'region{name=swamp}'
+        
+        # When drop table is read, one of these
+        # items will be selected randomly.
+        items:
+        
+        # Tugs needed: 4 to 5
+        # Fishing EXP earned: 1 to 6
+        - 'mmoitem{type=CONSUMABLE;id=SUSHI_ROLL;tugs=30-40;experience=1-6}'
+        
+        # Tugs needed: 10 to 20
+        # Fishing EXP earned: 20 to 30
+        - 'mmoitem{type=GEM_STONE;id=SPITEFUL_OPAQUE_DIAMOND;tugs=10-15;experience=20-30}'
+
+    # Default drop table which always apply.
+    # When removing every drop table, the vanilla
+    # fishing mecanism is back.
+    default:
+        items:
+        - 'vanilla{type=SALMON;tugs=4-5;experience=1-6}'

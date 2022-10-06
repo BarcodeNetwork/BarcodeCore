@@ -1,0 +1,1 @@
+/Volumes/Development/IdeaProjects/BarcodeCore/barcode-buildscripts/modules/common/build/classes/kotlin/main/BarcodeTaskContainerScopeProviderKt.class:/Volumes/Development/IdeaProjects/BarcodeCore/barcode-buildscripts/modules/common/build/classes/kotlin/main/com/vjh0107/barcode/buildscripts/common/BarcodeTaskContainerScope.class

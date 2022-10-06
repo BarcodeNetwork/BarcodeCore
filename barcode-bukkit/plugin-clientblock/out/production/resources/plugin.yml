@@ -1,0 +1,10 @@
+name: BarcodeClientBlock
+version: 1.0.0
+main: com.vjh0107.barcode.clientblock.BarcodeClientBlockPlugin
+author: vjh0107
+depend:
+ - CommandAPI
+ - BarcodeFramework
+ - LuckPerms
+ - ProtocolLib
+api-version: 1.18

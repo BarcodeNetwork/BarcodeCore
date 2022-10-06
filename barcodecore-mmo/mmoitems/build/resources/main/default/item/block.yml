@@ -1,0 +1,24 @@
+'1':
+  base:
+    name: '&aMy First Custom Block'
+    lore:
+    - '&7Wow... It''s possible!'
+    - '&7That''s awesome!'
+    required-power: 2
+    min-xp: 10
+    max-xp: 20
+    gen-template: basic-template
+    material: STONE
+    block-id: 1.0
+'2':
+  base:
+    name: '&bMy Second Custom Block'
+    material: STONE
+    block-id: 2.0
+'3':
+  base:
+    lore:
+    - I have no display name.
+    - I only have a lore!
+    material: STONE
+    block-id: 3.0

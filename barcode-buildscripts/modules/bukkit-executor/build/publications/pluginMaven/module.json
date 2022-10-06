@@ -1,0 +1,113 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.vjh0107",
+    "module": "bukkit-executor",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "bukkit-executor-1.0.0.jar",
+          "url": "bukkit-executor-1.0.0.jar",
+          "size": 11001,
+          "sha512": "4ab09241481b9e5b797596e8d9548ebe017e45fe4d7d753d97517a11be76fc9bca0ac100281dd50f5c6cb07a1bef9f34828ae83737d6b5624160dfe4ef3018d5",
+          "sha256": "a5e7a1189e4672a0b2bc7d1df7cffde10cc2dd595906758824c7b6d8fd3a13ad",
+          "sha1": "f34a502544d8fb5b993e799d4902b1a8e3e68223",
+          "md5": "3a2d556b7160488e056cb4d2558b9abc"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 17,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "barcode-buildscripts.modules",
+          "module": "common",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "bukkit-executor-1.0.0.jar",
+          "url": "bukkit-executor-1.0.0.jar",
+          "size": 11001,
+          "sha512": "4ab09241481b9e5b797596e8d9548ebe017e45fe4d7d753d97517a11be76fc9bca0ac100281dd50f5c6cb07a1bef9f34828ae83737d6b5624160dfe4ef3018d5",
+          "sha256": "a5e7a1189e4672a0b2bc7d1df7cffde10cc2dd595906758824c7b6d8fd3a13ad",
+          "sha1": "f34a502544d8fb5b993e799d4902b1a8e3e68223",
+          "md5": "3a2d556b7160488e056cb4d2558b9abc"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bukkit-executor-1.0.0-javadoc.jar",
+          "url": "bukkit-executor-1.0.0-javadoc.jar",
+          "size": 261,
+          "sha512": "9f8a6c9aec49a6a074a7ebc5a9710057a0f152251a30fac5c5c94c23057dd04fc01f52f3ba43bf7bba080f9e8fd66d1a70829a129a4b97fd5fae807e6d981f52",
+          "sha256": "e5da9e9b8a41ed6b14479e3544be316101a4770eb929724882c4afb56b5da0fc",
+          "sha1": "f8b010667ca349db08303f8ffe04d59db3852944",
+          "md5": "cffc4885e956ba45cd27039a7eef5047"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "bukkit-executor-1.0.0-sources.jar",
+          "url": "bukkit-executor-1.0.0-sources.jar",
+          "size": 3070,
+          "sha512": "8f5321cfc18a7f7c4effc6fc13594f87fb495acd1230899ccc809c27d2705819ec2b124eab77a2072b4118074db6f9663efbfe80588f5cd508c4efbf7bce38d8",
+          "sha256": "66e2ebb4a52f8a93d41160d7deb60242e190bf0e2143c8063c42d618aaced0ac",
+          "sha1": "2bff5dbb73f059b811d6bd342b03b08913f248d9",
+          "md5": "6510b222da9021b2fbe0a30bee1c0b8a"
+        }
+      ]
+    }
+  ]
+}

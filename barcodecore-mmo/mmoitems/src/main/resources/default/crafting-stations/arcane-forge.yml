@@ -1,0 +1,84 @@
+
+# Name which will be displayed
+# when opening the station
+name: 'Arcane Forge (#page#/#max#)'
+
+# The maximum amount of items in the crafting queue ie. the
+# max number of items players are able to craft simultaneously.
+# Must be between 1 and 64.
+max-queue-size: 10
+
+# The sound that plays whenever an action is
+# completed in the crafting station.
+# GET SOUND NAMES HERE:
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+# This is how the gui looks. You can define your own
+# in crafting-stations/layouts by creating a new
+# file with the name of the file as the id.
+layout: default
+
+# Configure GUI items here
+items:
+    fill:
+        material: AIR
+    no-recipe:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aNo Recipe'
+    no-queue-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aNo Item in Queue'
+
+# Station recipes
+recipes:
+    magic-essence:
+        output:
+            type: MATERIAL
+            id: MAGIC_ESSENCE
+            amount: 1
+        crafting-time: 5
+        conditions:
+        - 'level{level=5}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=3,display="Magic Fragment"}
+    arcane-helmet:
+        output:
+            type: ARMOR
+            id: ARCANE_HELM
+            amount: 1
+        crafting-time: 7
+        conditions:
+        - 'level{level=4}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=6,display="Magic Fragment"}
+    steel-chestplate:
+        output:
+            type: ARMOR
+            id: ARCANE_CHESTPLATE
+            amount: 1
+        crafting-time: 7
+        conditions:
+        - 'level{level=4}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=9,display="Magic Fragment"}
+    steel-leggings:
+        output:
+            type: ARMOR
+            id: ARCANE_LEGGINGS
+            amount: 1
+        crafting-time: 7
+        conditions:
+        - 'level{level=4}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=8,display="Magic Fragment"}
+    steel-boots:
+        output:
+            type: ARMOR
+            id: ARCANE_BOOTS
+            amount: 1
+        crafting-time: 7
+        conditions:
+        - 'level{level=4}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=MAGIC_FRAGMENT,amount=5,display="Magic Fragment"}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.vjh0107.barcode.framework.koin.test.injector.ReflectionInjectorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-09-24T05:16:12" hostname="Junhyungs-MacBook-Pro.local" time="0.065">
+  <properties/>
+  <testcase name="createModuleTest" classname="com.vjh0107.barcode.framework.koin.test.injector.ReflectionInjectorTest" time="0.061"/>
+  <testcase name="injectTest" classname="com.vjh0107.barcode.framework.koin.test.injector.ReflectionInjectorTest" time="0.001"/>
+  <system-out><![CDATA[10
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

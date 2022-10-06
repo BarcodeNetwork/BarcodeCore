@@ -1,0 +1,167 @@
+
+# Name which will be displayed
+# when opening the station
+name: 'Mythical Forge (#page#/#max#)'
+
+# The maximum amount of items in the crafting queue ie. the
+# max number of items players are able to craft simultaneously.
+# Must be between 1 and 64.
+max-queue-size: 10
+
+# The sound that plays whenever an action is
+# completed in the crafting station.
+# GET SOUND NAMES HERE:
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Sound.html
+sound: ENTITY_EXPERIENCE_ORB_PICKUP
+
+# This is how the gui looks. You can define your own
+# in crafting-stations/layouts by creating a new
+# file with the name of the file as the id.
+layout: default
+
+# Crafting station parent. This station will inherit of
+# all the recipes of the specified crafting station
+parent: arcane-forge
+
+# Configure GUI items here
+items:
+    fill:
+        material: AIR
+    no-recipe:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aNo Recipe'
+    no-queue-item:
+        material: GRAY_STAINED_GLASS_PANE
+        name: '&aNo Item in Queue'
+
+# Station recipes
+recipes:
+    soulstealer:
+        output:
+            type: SWORD
+            id: SOULSTEALER
+            amount: 1
+        crafting-time: 20
+        conditions:
+        - 'level{level=24}'
+        ingredients:
+        - mmoitem{type=MISCELLANEOUS,id=HUMAN_SOUL,amount=8,display="Human Soul"}
+        - mmoitem{type=SWORD,id=STEEL_SWORD,amount=1,display="Steel Sword"}
+    fire-essence:
+        output:
+            type: MATERIAL
+            id: FIRE_ESSENCE
+            amount: 1
+        crafting-time: 5
+        conditions:
+        - 'level{level=15}'
+        ingredients:
+        - vanilla{type=BLAZE_POWDER,amount=4,display="Blaze Powder"}
+    fire-totem:
+        output:
+            type: CATALYST
+            id: FIRE_TOTEM
+            amount: 1
+        crafting-time: 30
+        conditions:
+        - 'level{level=10}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=FIRE_ESSENCE,amount=8,display="Fire Essence"}
+        - vanilla{type=BLAZE_ROD,amount=1,display="Blaze Rod"}
+        - vanilla{type=BLAZE_POWDER,amount=4,display="Blaze Powder"}
+    blaze-soul:
+        output:
+            type: GEM_STONE
+            id: BLAZE_SOUL
+            amount: 1
+        crafting-time: 20
+        conditions:
+        - 'level{level=12}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=FIRE_ESSENCE,amount=5,display="Fire Essence"}
+    hell-bow:
+        output:
+            type: BOW
+            id: HELL_BOW
+            amount: 1
+        crafting-time: 20
+        conditions:
+        - 'level{level=24}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=FIRE_ESSENCE,amount=2,display="Fire Essence"}
+        - vanilla{type=BOW,amount=1,display="Bow"}
+    fire-greatlance:
+        output:
+            type: LANCE
+            id: FIRE_GREATLANCE
+            amount: 1
+        crafting-time: 35
+        conditions:
+        - 'level{level=30}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=FIRE_ESSENCE,amount=4,display="Fire Essence"}
+    molten-blade:
+        output:
+            type: GREATSWORD
+            id: MOLTEN_BLADE
+            amount: 1
+        crafting-time: 20
+        conditions:
+        - 'level{level=20}'
+        ingredients:
+        - mmoitem{type=MATERIAL,id=FIRE_ESSENCE,amount=13,display="Fire Essence"}
+        - mmoitem{type=SWORD,id=STEEL_SWORD,amount=1,display="Steel Sword"}
+    wither-essence:
+        output:
+            type: MATERIAL
+            id: WITHER_ESSENCE
+            amount: 1
+        crafting-time: 5
+        conditions:
+        - 'level{level=20}'
+        ingredients:
+        - vanilla{type=WITHER_SKELETON_SKULL}
+    marking-bow:
+        output:
+            type: BOW
+            id: MARKING_BOW
+            amount: 1
+        crafting-time: 20
+        conditions:
+        - 'level{level=20}'
+        ingredients:
+        - vanilla{type=BOW,amount=1,display="Bow"}
+        - mmoitem{type=MATERIAL,id=WITHER_ESSENCE,amount=1,display="Wither Essence"}
+    cursed-wither-skull:
+        output:
+            type: ARMOR
+            id: CURSED_WITHER_SKULL
+            amount: 1
+        crafting-time: 10
+        conditions:
+        - 'level{level=15}'
+        ingredients:
+        - vanilla{type=IRON_HELMET}
+        - mmoitem{type=MATERIAL,id=WITHER_ESSENCE,amount=1,display="Wither Essence"}
+    dead-pharaoh-helmet:
+        output:
+            type: ARMOR
+            id: DEAD_PHARAOH_HELMET
+            amount: 1
+        crafting-time: 10
+        conditions:
+        - 'level{level=10}'
+        ingredients:
+        - vanilla{type=DIAMOND}
+        - vanilla{type=SKELETON_SKULL}
+    mossy-skeleton-skull:
+        output:
+            type: ARMOR
+            id: MOSSY_SKELETON_SKULL
+            amount: 1
+        crafting-time: 10
+        conditions:
+        - 'level{level=17}'
+        ingredients:
+        - vanilla{type=MOSSY_COBBLESTONE}
+        - vanilla{type=SKELETON_SKULL}

@@ -1,0 +1,20 @@
+name: MMOCore
+version: BarcodeNetwork-1.8.2
+main: net.Indyuce.mmocore.MMOCore
+author: Indyuce
+description: MMOCore for Barcode network
+loadbefore: [MMOItems]
+depend: [MythicLib]
+softdepend: [MythicMobs,PlaceholderAPI]
+api-version: 1.13
+commands:
+    mmocore:
+        description: Main command.
+        aliases: [rpg]
+permissions:
+    mmocore.admin:
+        description: Access to /mmocore
+        default: op
+    mmocore.class-select:
+        description: Access to /class
+        default: op

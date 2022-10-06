@@ -1,0 +1,45 @@
+name: MythicLib
+author: Lumine Studios
+main: io.lumine.mythic.lib.MythicLib
+api-version: 1.13
+version: ${project.version}
+loadbefore: [ MMOCore,MMOItems ]
+softdepend: [ WorldGuard,Residence,Factions ]
+description: Kind of like mythiclib, but without the generic disorders
+commands:
+  mythiclib:
+    description: Reload mythiclib
+    permission: mythiclib.reload
+  healthscale:
+    description: Scales Player's health
+    permission: mythiclib.command.healthscale
+  exploreattributes:
+    description: Explore player attributes.
+    permission: mythiclib.explore-attributes
+  mmodebug:
+    description: Debug data by sending it straight to the devs
+    permission: mythiclib.debug
+  mmotempstat:
+    description: Add temporary stat modifier to player
+    permission: mythiclib.tempstat
+  superworkbench:
+    aliases: [ swb ]
+    description: Open the super 5x5 workbench
+    permission: mythiclib.superworkbench
+  megaworkbench:
+    aliases: [ mwb ]
+    description: Open the mega 6x6 workbench
+    permission: mythiclib.megaworkbench
+permissions:
+  mythiclib.reload:
+    default: op
+  mythiclib.explore-attributes:
+    default: op
+  mythiclib.debug:
+    default: op
+  mythiclib.tempstat:
+    default: op
+  mythiclib.superworkbench:
+    default: op
+  mythiclib.megaworkbench:
+    default: op

@@ -1,0 +1,20 @@
+STEEL_PICKAXE:
+  base:
+    material: IRON_PICKAXE
+    name: '&fSteel Pickaxe'
+    max-durability: 1000
+    tier: COMMON
+    lore:
+    - '&7A much more durable iron pick.'
+    will-break: true
+    unbreakable: true
+STEEL_SHOVEL:
+  base:
+    material: IRON_SHOVEL
+    name: '&fSteel Shovel'
+    max-durability: 1000
+    tier: COMMON
+    lore:
+    - '&7A much more durable iron spade.'
+    will-break: true
+    unbreakable: true

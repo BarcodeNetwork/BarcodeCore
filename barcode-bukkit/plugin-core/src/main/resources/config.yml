@@ -1,0 +1,9 @@
+database:
+  address: localhost
+  port: 3306
+  databaseName: barcodedb
+  user: root
+  password: 'examplePassword1234'
+
+npc:
+  temporary-npc-id-starts: 100000

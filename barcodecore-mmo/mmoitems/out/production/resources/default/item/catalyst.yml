@@ -1,0 +1,59 @@
+NATURES_GIFT:
+  base:
+    material: OAK_SAPLING
+    disable-crafting: true
+    name: '&9Magical Catalyst'
+    lore:
+    - '&7No one knows where it was found.'
+    magic-damage:
+      base: 15.0
+      spread: 0.084
+      max-spread: 0.25
+    required-level: 4.0
+    required-class:
+    - Wizard
+    - Paladin
+    hide-enchants: true
+    enchants:
+      unbreaking: 1
+LUCKY_CHARM:
+  base:
+    material: RABBIT_FOOT
+    name: '&fLucky Charm'
+    tier: NORMAL
+    critical-strike-chance: 2.5
+WARRIOR_AMULET:
+  base:
+    material: GRAY_DYE
+    name: '&fWarrior Amulet'
+    disable-crafting: true
+    hide-enchants: true
+    enchants:
+      unbreaking: 1
+    damage-reduction: 5.0
+FORGOTTEN_IDOL:
+  base:
+    material: GOLD_NUGGET
+    enchants:
+      unbreaking: 1
+    hide-enchants: true
+    name: '&eForgotten Idol'
+    required-level: 19.0
+    weapon-damage:
+      base: 35.0
+      spread: 0.042
+      max-spread: 0.13
+FIRE_TOTEM:
+  base:
+    material: BLAZE_ROD
+    hide-enchants: true
+    enchants:
+      unbreaking: 1
+    name: '&fFire Totem'
+    tier: RARE
+    fire-damage-reduction:
+      base: 85.0
+      spread: 0.02
+      max-spread: 0.06
+    required-level: 10.0
+    disable-crafting: true

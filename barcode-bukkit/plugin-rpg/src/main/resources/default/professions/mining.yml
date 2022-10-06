@@ -1,0 +1,86 @@
+
+# Display options
+name: Mining
+
+# Experience given to the main level
+# when leveling up this profession
+experience:
+    base: 20
+    per-level: 3
+
+# Must match an existing exp curve filename from the 'expcurves' folder
+exp-curve: mining
+
+# This part of the config is ONLY for custom mining.
+# Custom Mining must be setup in config.yml and it
+# will render any block not referenced in here as unminable.
+# If you do not wish to use custom mining it is recommended
+# to follow the format in woodcutting.yml for experience and
+# configure drop tables with MMOItems.
+# Block Regen is currently only possible using custom mining.
+on-mine:
+
+    # Config example showing how you can bind drops and experience
+    # to custom player heads based on the skull texture.
+    diamond-skull:
+        # Diamond ore skull texture
+        material: 'skull{value="eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2EzYmI4NWRlYzEzMjlmZTgyOWNjNmNkY2QzNGUxYmQ2MGVlODMyZjU3MjYyOTY1MWYxNGI1ZTE0NTU1ZGJiMSJ9fX0="}'
+        drop-table:
+            items:
+            - 'vanilla{type=DIAMOND} 1 1-4'
+        options:
+            vanilla-drops: false
+        regen:
+            time: 20
+            # Stone block skull texture
+            temp-block: 'skull{value="eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTU0ODE4MjMzYzgxMTg3M2U4NWY1YTRlYTQ0MjliNzVmMjNiNmFlMGVhNmY1ZmMwZjdiYjQyMGQ3YzQ3MSJ9fX0="}'
+        triggers:
+        - 'exp{profession=mining;amount=20}'
+    
+    emerald:
+        material: vanilla{type=EMERALD_ORE}
+        drop-table:
+            items:
+            - 'vanilla{type=EMERALD} 1 1-9'
+        options:
+            vanilla-drops: false
+        regen:
+            time: 2000
+            temp-block: vanilla{type=STONE}
+        triggers:
+        - 'exp{profession=mining;amount=32}'
+
+    diamond:
+        # The material you need to mine
+        material: vanilla{type=DIAMOND_ORE}
+
+        # Refer to drop-tables.yml
+        # The drop table used by the block.
+        drop-table:
+            items:
+            - 'vanilla{type=DIAMOND} 1 1-3'
+           # - 'mmoitem{type=material;id=RARE_DIAMOND} .1 1-3'
+           # - 'droptable{id=other-drop-table} .1'
+        
+        # Triggers when destroying the block, can
+        # be used to give exp to a player!
+        triggers:
+        - 'exp{profession=mining;amount=20}'
+        
+        options:
+            # Set to false if you want to disable vanila drops.
+            vanilla-drops: false
+        
+        regen:
+        
+            # Ticks the block takes to appear again
+            time: 2000
+            
+            # The temporary block which shows
+            # during the block regen time.
+            #
+            # !! Warning !!
+            # When using the temp-block option, make sure you choose
+            # one temp block and don't use it anywhere else in the
+            # configuration so that block regens do not affect each other
+            temp-block: vanilla{type=STONE}

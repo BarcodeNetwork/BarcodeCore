@@ -1,0 +1,8 @@
+name: BarcodeCutscene
+version: 1.0.0
+main: com.vjh0107.barcode.cutscene.BarcodeCutscenePlugin
+author: vjh0107
+depend:
+ - CommandAPI
+ - BarcodeFramework
+api-version: 1.18

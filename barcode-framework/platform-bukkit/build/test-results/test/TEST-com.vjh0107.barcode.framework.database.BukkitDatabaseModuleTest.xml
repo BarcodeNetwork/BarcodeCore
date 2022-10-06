@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.vjh0107.barcode.framework.database.BukkitDatabaseModuleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-20T01:29:33" hostname="Junhyungs-MacBook-Pro.local" time="2.456">
+  <properties/>
+  <testcase name="test" classname="com.vjh0107.barcode.framework.database.BukkitDatabaseModuleTest" time="2.456"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

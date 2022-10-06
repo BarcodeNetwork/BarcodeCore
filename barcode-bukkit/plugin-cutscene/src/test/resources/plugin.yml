@@ -1,0 +1,7 @@
+name: CutscenePluginMocked
+version: 1.0.0
+main: com.vjh0107.barcode.cutscene.CutscenePluginMocked
+commands:
+  test:
+    description: Used for testing
+    usage: /test [args]

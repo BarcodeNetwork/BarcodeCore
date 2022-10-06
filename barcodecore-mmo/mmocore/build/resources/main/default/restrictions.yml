@@ -1,0 +1,44 @@
+# Mining a block in creative will NOT drop any
+# custom drops/will not apply block regen, etc.
+#
+# Any block specified in this config, wherever it
+# is located, MUST be mined using the correct tool
+# otherwise nothing will drop!
+
+# The corresponding tool. It's CASE_SENSITIVE!
+WOODEN_PICKAXE:
+
+    # What the tool can mine.
+    can-mine:
+    - vanilla{type=COAL_ORE}
+
+STONE_PICKAXE:
+    can-mine:
+    - vanilla{type=IRON_ORE}
+    # MMOItems custom blocks with ID 1
+    - mmoitems{id=1}
+    
+    # The block break permissions the tool inherits.
+    # e.g a stone pickaxe can mine iron ores PLUS
+    # any block that the wooden pickaxe can mine.
+    # Used to make the config much clearer.
+    parent: WOODEN_PICKAXE
+
+IRON_PICKAXE:
+    parent: STONE_PICKAXE
+    can-mine:
+    - vanilla{type=GOLD_ORE}
+    # Custom skull with diamond ore texture
+    - skull{value="eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2EzYmI4NWRlYzEzMjlmZTgyOWNjNmNkY2QzNGUxYmQ2MGVlODMyZjU3MjYyOTY1MWYxNGI1ZTE0NTU1ZGJiMSJ9fX0="}
+
+GOLDEN_PICKAXE:
+    parent: IRON_PICKAXE
+    can-mine:
+    - vanilla{type=LAPIS_ORE}
+
+DIAMOND_PICKAXE:
+    parent: GOLDEN_PICKAXE
+    can-mine:
+    - vanilla{type=DIAMOND_ORE}
+    - vanilla{type=EMERALD_ORE}
+    - vanilla{type=REDSTONE_ORE}
