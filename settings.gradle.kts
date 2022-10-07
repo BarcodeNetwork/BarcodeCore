@@ -20,7 +20,6 @@ pluginManagement {
     }
 }
 
-
 file(rootProject.projectDir.path + "/publish.gradle.kts").let {
     if (it.exists()) {
         apply(it.path)

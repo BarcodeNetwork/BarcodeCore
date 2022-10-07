@@ -3,7 +3,7 @@ plugins {
     java
     kotlin("plugin.serialization")
     id("com.google.devtools.ksp")
-    id("barcode-buildscripts.ksp-extension")
+    id("com.vjh0107.barcode.buildscripts.ksp-extension")
 }
 
 group = "com.vjh0107.barcode"

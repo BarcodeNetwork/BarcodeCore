@@ -3,7 +3,7 @@ plugins {
     java
     `maven-publish`
     id("com.google.devtools.ksp")
-    id("barcode-buildscripts.ksp-extension")
+    id("com.vjh0107.barcode.buildscripts.ksp-extension")
     kotlin("plugin.serialization")
 }
 

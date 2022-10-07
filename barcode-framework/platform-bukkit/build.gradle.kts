@@ -1,10 +1,10 @@
 plugins {
     kotlin("jvm")
     java
-    id("barcode-buildscripts.bukkit-resource-generator")
-    id("barcode-buildscripts.special-source")
-    id("com.vjh0107.barcode-buildscripts.bukkit-executor")
-    id("barcode-buildscripts.ksp-extension")
+    id("com.vjh0107.barcode.buildscripts.bukkit-resource-generator")
+    id("com.vjh0107.barcode.buildscripts.special-source")
+    id("com.vjh0107.barcode.buildscripts.bukkit-executor")
+    id("com.vjh0107.barcode.buildscripts.ksp-extension")
     id("com.google.devtools.ksp")
 
     id("com.github.johnrengelman.shadow")

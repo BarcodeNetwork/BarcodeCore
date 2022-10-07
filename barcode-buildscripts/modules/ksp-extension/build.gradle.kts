@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.konan.properties.loadProperties
 plugins {
     `kotlin-dsl`
     `java-gradle-plugin`
+    id("com.gradle.plugin-publish")
 }
 
 repositories {
@@ -15,11 +16,25 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
 }
 
+version = "1.0.0"
+group = "com.vjh0107"
+
 gradlePlugin {
     plugins {
         register("ksp-extension") {
-            id = "barcode-buildscripts.ksp-extension"
+            displayName = "BarcodeKSPExtension"
+            description = "KSP extension plugin for BarcodeNetwork"
+            id = "com.vjh0107.barcode.buildscripts.ksp-extension"
             implementationClass = "com.vjh0107.barcode.buildscripts.kspextension.KSPExtensionPlugin"
         }
     }
 }
+
+pluginBundle {
+    val projectUrl: String by project
+    website = projectUrl
+    vcsUrl = projectUrl
+    description = project.description
+    tags = listOf("barcode", "ksp-extension")
+}
+

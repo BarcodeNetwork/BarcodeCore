@@ -30,10 +30,10 @@
           "name": "bukkit-executor-1.0.0.jar",
           "url": "bukkit-executor-1.0.0.jar",
           "size": 11001,
-          "sha512": "4ab09241481b9e5b797596e8d9548ebe017e45fe4d7d753d97517a11be76fc9bca0ac100281dd50f5c6cb07a1bef9f34828ae83737d6b5624160dfe4ef3018d5",
-          "sha256": "a5e7a1189e4672a0b2bc7d1df7cffde10cc2dd595906758824c7b6d8fd3a13ad",
-          "sha1": "f34a502544d8fb5b993e799d4902b1a8e3e68223",
-          "md5": "3a2d556b7160488e056cb4d2558b9abc"
+          "sha512": "9c06b33fd426bbce6f7a189e1c7071d0febd35a1fcfaf9a7d974b6ab40b3e0984294db3960cdeebe7be88b6dd544c8252af27b239192334407f497abdb766a58",
+          "sha256": "d34154898a6006bb4ecbae2a9ce5a317dfafbd59b30b3c4bfa13070ec6c29049",
+          "sha1": "2d5b5ea58b9be6198e49332cb4037587aa158c18",
+          "md5": "16ba2b7a3e9405381fb6bacdcc5036b2"
         }
       ]
     },
@@ -62,10 +62,10 @@
           "name": "bukkit-executor-1.0.0.jar",
           "url": "bukkit-executor-1.0.0.jar",
           "size": 11001,
-          "sha512": "4ab09241481b9e5b797596e8d9548ebe017e45fe4d7d753d97517a11be76fc9bca0ac100281dd50f5c6cb07a1bef9f34828ae83737d6b5624160dfe4ef3018d5",
-          "sha256": "a5e7a1189e4672a0b2bc7d1df7cffde10cc2dd595906758824c7b6d8fd3a13ad",
-          "sha1": "f34a502544d8fb5b993e799d4902b1a8e3e68223",
-          "md5": "3a2d556b7160488e056cb4d2558b9abc"
+          "sha512": "9c06b33fd426bbce6f7a189e1c7071d0febd35a1fcfaf9a7d974b6ab40b3e0984294db3960cdeebe7be88b6dd544c8252af27b239192334407f497abdb766a58",
+          "sha256": "d34154898a6006bb4ecbae2a9ce5a317dfafbd59b30b3c4bfa13070ec6c29049",
+          "sha1": "2d5b5ea58b9be6198e49332cb4037587aa158c18",
+          "md5": "16ba2b7a3e9405381fb6bacdcc5036b2"
         }
       ]
     },

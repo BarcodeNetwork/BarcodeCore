@@ -1,7 +1,7 @@
 plugins {
     kotlin("jvm")
     java
-    id("barcode-buildscripts.special-source")
+    id("com.vjh0107.barcode.buildscripts.special-source")
     `maven-publish`
 }
 

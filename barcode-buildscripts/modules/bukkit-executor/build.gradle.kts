@@ -19,27 +19,17 @@ gradlePlugin {
     plugins {
         register("bukkit-executor") {
             displayName = "BarcodeBukkitExecutor"
-            description = "Bukkit Executor Plugin for BarcodeNetwork"
-            id = "com.vjh0107.barcode-buildscripts.bukkit-executor"
+            description = "Bukkit executor plugin for BarcodeNetwork"
+            id = "com.vjh0107.barcode.buildscripts.bukkit-executor"
             implementationClass = "com.vjh0107.barcode.buildscripts.bukkitexecutor.BukkitExecutorPlugin"
         }
     }
 }
 
 pluginBundle {
-    website = "https://github.com/BarcodeNetwork/BarcodeCore"
-    vcsUrl = "https://github.com/BarcodeNetwork/BarcodeCore"
+    val projectUrl: String by project
+    website = projectUrl
+    vcsUrl = projectUrl
     description = project.description
-    tags = listOf("bukkit-executor")
-}
-
-tasks.login {
-    val key = "xCtIJaM4XSPvc6KHL7FPp7L1HyV9njvf"
-    val secret = "efMe7eIxw0KgawGC6Kfhlw6tSBApsbGj"
-    if (key == null || secret == null) {
-        throw GradleException("gradlePublishKey 혹은 gradlePublishSecret 이 정의되지 않았습니다.")
-    }
-    System.setProperty("gradle.publish.key", key)
-    System.setProperty("gradle.publish.secret", secret)
-    login()
+    tags = listOf("barcode", "bukkit-executor")
 }
