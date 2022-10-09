@@ -31,8 +31,9 @@ barcodeTasks {
 
 dependencies {
     compileOnly(Dependency.Minecraft.SPIGOT_REMAPPED)
-    implementation(Dependency.Minecraft.KyoriAdventure.API)
-    implementation(Dependency.Minecraft.KyoriAdventure.BUKKIT)
+    compileOnly(Dependency.Minecraft.PAPER_API)
+    compileOnly(Dependency.Minecraft.KyoriAdventure.API)
+    compileOnly(Dependency.Minecraft.KyoriAdventure.BUKKIT)
 
     implementationModule(BarcodeModule.Framework.COMMON)
     implementationModule(BarcodeModule.Framework.BUKKIT_COMMON)

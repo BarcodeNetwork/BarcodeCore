@@ -1,8 +1,8 @@
-package com.vjh0107.barcode.framework.nms.v1_19_R1
+package com.vjh0107.barcode.framework.nms.impl
 
 import com.vjh0107.barcode.framework.nbt.NBTItem
-import com.vjh0107.barcode.framework.nms.NMSWrapper
-import com.vjh0107.barcode.framework.nms.v1_19_R1.nbt.NBTItem_v1_19_R1
+import com.vjh0107.barcode.framework.nms.NMSService
+import com.vjh0107.barcode.framework.nms.impl.nbt.NBTItem_v1_19_R1
 import com.vjh0107.barcode.framework.utils.uncheckedNonnullCast
 import net.minecraft.network.protocol.game.ClientboundAddEntityPacket
 import net.minecraft.network.syncher.EntityDataAccessor
@@ -18,7 +18,7 @@ import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 
 @Suppress("unused", "ClassName")
-class NMSWrapperImpl : NMSWrapper {
+class NMSService_v1_19_R1 : NMSService {
     override fun getNBTItem(item: ItemStack): NBTItem {
         return NBTItem_v1_19_R1(item)
     }

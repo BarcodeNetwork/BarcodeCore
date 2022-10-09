@@ -6,7 +6,7 @@ import org.bukkit.entity.Entity
 import org.bukkit.entity.Player
 import org.bukkit.inventory.ItemStack
 
-interface NMSWrapper {
+interface NMSService {
     /**
      * 엔티티에게 박힌 화살을 제거합니다.
      */

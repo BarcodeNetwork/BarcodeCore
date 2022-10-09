@@ -1,4 +1,4 @@
-package com.vjh0107.barcode.framework.nms.v1_19_R1.nbt
+package com.vjh0107.barcode.framework.nms.impl.nbt
 
 import com.vjh0107.barcode.framework.nbt.data.ItemTag
 import com.vjh0107.barcode.framework.nbt.NBTCompound

@@ -26,7 +26,7 @@ dependencies {
     }
     implementationModule(BarcodeModule.Framework.COMMON)
     implementationModule(BarcodeModule.Framework.KOIN)
-    implementation(Dependency.Minecraft.KyoriAdventure.API)
+    compileOnly(Dependency.Minecraft.KyoriAdventure.API)
     implementation(Dependency.KotlinX.Serialization.JSON)
     with(Dependency.Koin) {
         compileOnly(CORE)

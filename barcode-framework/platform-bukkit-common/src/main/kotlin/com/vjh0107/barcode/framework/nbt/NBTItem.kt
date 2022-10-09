@@ -1,12 +1,10 @@
 package com.vjh0107.barcode.framework.nbt
 
-import com.vjh0107.barcode.framework.koin.injector.inject
 import com.vjh0107.barcode.framework.nbt.data.ItemTag
-import com.vjh0107.barcode.framework.nms.NMSWrapper
 import net.kyori.adventure.text.Component
 import org.bukkit.inventory.ItemStack
 
-abstract class NBTItem(val item: ItemStack) {
+abstract class NBTItem(protected val item: ItemStack) {
     /**
      * path 에 있는 NBTCompound 를 가져옵니다.
      */
@@ -82,16 +80,6 @@ abstract class NBTItem(val item: ItemStack) {
      */
     fun addTag(vararg tags: ItemTag): NBTItem {
         return addTag(listOf(*tags))
-    }
-
-    companion object {
-        /**
-         * NBTItem 을 가져옵니다.
-         */
-        fun get(item: ItemStack): NBTItem {
-            val nmsWrapper: NMSWrapper by inject()
-            return nmsWrapper.getNBTItem(item)
-        }
     }
 }
 

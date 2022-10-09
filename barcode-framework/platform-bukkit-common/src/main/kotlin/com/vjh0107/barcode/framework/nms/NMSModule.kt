@@ -7,10 +7,10 @@ import org.koin.core.annotation.Single
 
 @Module
 class NMSModule {
-    @Single(binds = [NMSWrapper::class])
-    fun provideNMSWrapper(): NMSWrapper {
+    @Single(binds = [NMSService::class])
+    fun provideNMSWrapper(): NMSService {
         val nmsWrapper = try {
-            Class.forName("com.vjh0107.barcode.framework.nms.${getNMSVersion()}.NMSWrapperImpl")
+            Class.forName("com.vjh0107.barcode.framework.nms.impl.NMSWrapper_${getNMSVersion()}")
         } catch (exception: ClassNotFoundException) {
             Bukkit.getLogger().severe("버전에 맞는 NMSWrapper 가 없습니다: ${getNMSVersion()}")
             throw exception
