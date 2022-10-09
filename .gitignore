@@ -1,6 +1,8 @@
 .gradle/
 .idea/
-TEST_BUKKIT_V_1_17/
 /build_outputs/
 publish.gradle.kts
 .DS_Store
+
+build/
+**/build/

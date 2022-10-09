@@ -144,7 +144,6 @@ object Dependency {
         const val JSEngine = "JSEngine.jar"
         const val MythicLib = "MythicLib-1.1.6.jar"
         const val ModelEngine = "Model-Engine-R2.5.1.jar"
-        const val MythicMobs = "MythicMobs-5.1.0-SNAPSHOT.jar"
         const val GPS = "GPS.jar"
         const val MagicSpells = "MagicSpellsLib.jar"
     }
@@ -165,6 +164,7 @@ object Dependency {
         const val CitizensAPI = "net.citizensnpcs:citizensapi:2.0.30-SNAPSHOT"
         const val LuckPermsAPI = "net.luckperms:api:5.4"
         const val ModelEngine = "com.ticxo.modelengine:api:R2.5.0"
+        const val MythicMobs = "io.lumine:Mythic-Dist:5.1.2-SNAPSHOT"
 
         object TAB : DependencySet<String> {
             private const val VERSION = "3.1.0"
