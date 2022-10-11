@@ -19,10 +19,14 @@ fun DefaultTask.dependModuleTask(module: BarcodeModule, taskName: String) {
     this.dependsOn("${module.path}:$taskName")
 }
 
-
 fun AbstractArchiveTask.setBuildOutputDir(
     targetDir: String = "${project.rootDir.path}/build_outputs"
 ) {
     val file = project.file(targetDir)
     this.destinationDirectory.set(file)
+}
+
+fun AbstractCopyTask.includeAll(dependencySet: DependencySet<String>): AbstractCopyTask {
+    include(dependencySet.getDependencies())
+    return this
 }

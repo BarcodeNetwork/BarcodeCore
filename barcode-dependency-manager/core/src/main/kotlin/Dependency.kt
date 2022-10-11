@@ -7,7 +7,7 @@ object Dependency {
     object Minecraft {
         private const val version = "1.19.2-R0.1-SNAPSHOT"
 
-        const val PAPER = "io.papermc.paper:paper-api:$version"
+        const val PAPER_API = "io.papermc.paper:paper-api:$version"
         const val SPIGOT = "org.spigotmc:spigot:$version"
         const val SPIGOT_API = "org.spigotmc:spigot-api:$version"
         const val SPIGOT_REMAPPED = "org.spigotmc:spigot:$version:remapped-mojang"
