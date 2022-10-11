@@ -8,7 +8,7 @@ plugins {
 version = "1.0.0"
 
 dependencies {
-    compileOnly(Dependency.Minecraft.PAPER)
+    compileOnly(Dependency.Minecraft.PAPER_API)
     compileOnly(Dependency.Plugin.CommandAPI)
     with(Dependency.Koin) {
         compileOnly(CORE)

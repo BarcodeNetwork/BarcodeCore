@@ -22,9 +22,9 @@ group = "com.vjh0107"
 gradlePlugin {
     plugins {
         register("ksp-extension") {
-            displayName = "BarcodeKSPExtension"
-            description = "KSP extension plugin for BarcodeNetwork"
-            id = "com.vjh0107.barcode.buildscripts.ksp-extension"
+            displayName = "KSPExtension"
+            description = "KSP extension plugin"
+            id = "com.vjh0107.ksp-extension"
             implementationClass = "com.vjh0107.barcode.buildscripts.kspextension.KSPExtensionPlugin"
         }
     }

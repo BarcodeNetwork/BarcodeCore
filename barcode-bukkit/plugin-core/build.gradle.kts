@@ -32,7 +32,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly(Dependency.Minecraft.PAPER)
+    compileOnly(Dependency.Minecraft.PAPER_API)
 
     compileOnly(Dependency.KotlinX.Coroutines.CORE)
     compileOnly(Dependency.KotlinX.Serialization.JSON)
@@ -48,7 +48,7 @@ dependencies {
     compileOnly(Dependency.Plugin.Citizens)
     compileOnly(Dependency.Plugin.BigDoors)
     compileOnlyAll(Dependency.Plugin.TAB, isTransitive = true)
-    compileOnly(jar(Dependency.Directory.MythicMobs))
+    compileOnly(Dependency.Plugin.MythicMobs)
     compileOnly(jar(Dependency.Directory.GPS))
     compileOnly(jar(Dependency.Directory.MythicLib))
     compileOnly(jar(Dependency.Directory.ModelEngine))
@@ -65,7 +65,7 @@ dependencies {
 
     testImplementation(Dependency.Library.KOTLIN_REFLECT)
     testImplementation(Dependency.KotlinX.Serialization.JSON)
-    testImplementation(Dependency.Minecraft.PAPER)
+    testImplementation(Dependency.Minecraft.PAPER_API)
     testImplementation(Dependency.Minecraft.SPIGOT_API)
     testImplementationModule(BarcodeModule.Framework.COMMON)
     testImplementationModule(BarcodeModule.Framework.BUKKIT)

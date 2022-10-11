@@ -19,7 +19,7 @@ dependencies {
     compileOnly("com.google.code.findbugs:jsr305:3.0.0")
 
     compileOnly(jar(Dependency.Directory.MythicLib))
-    compileOnly(jar(Dependency.Directory.MythicMobs))
+    compileOnly(Dependency.Plugin.MythicMobs)
 
     compileOnly(Dependency.Minecraft.AUTH_LIB)
 

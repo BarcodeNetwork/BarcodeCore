@@ -1,4 +1,0 @@
-DEPOSIT_ITEM:
-    item: BOOK
-    name: '&eDeposit {worth}g'
-    lore: {}

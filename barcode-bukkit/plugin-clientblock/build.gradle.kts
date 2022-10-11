@@ -24,7 +24,7 @@ bukkit {
 }
 
 dependencies {
-    compileOnly(Dependency.Minecraft.PAPER)
+    compileOnly(Dependency.Minecraft.PAPER_API)
     compileOnlyModule(BarcodeModule.Framework.BUKKIT)
     compileOnlyModule(BarcodeModule.Framework.COMMON)
     compileOnlyModule(BarcodeModule.Framework.DATABASE)

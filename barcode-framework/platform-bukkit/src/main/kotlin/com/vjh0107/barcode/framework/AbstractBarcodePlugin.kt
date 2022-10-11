@@ -7,6 +7,7 @@ import com.vjh0107.barcode.framework.events.BarcodePluginDisableEvent
 import com.vjh0107.barcode.framework.exceptions.KeyNotFoundException
 import com.vjh0107.barcode.framework.injection.instance.injector.InjectorFactory
 import com.vjh0107.barcode.framework.koin.injector.inject
+import net.kyori.adventure.text.Component
 import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
 import org.koin.core.parameter.parametersOf
@@ -44,6 +45,9 @@ abstract class AbstractBarcodePlugin : JavaPlugin(), BarcodeApplication, Databas
     }
 
     final override fun onDisable() {
+        server.onlinePlayers.forEach {
+            it.kick(Component.text("§6서버가 종료되었습니다."))
+        }
         onPreDisable()
         componentHandlers.get().forEach {
             it.onDisable()

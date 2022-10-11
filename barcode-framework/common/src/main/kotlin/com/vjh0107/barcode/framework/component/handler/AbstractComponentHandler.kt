@@ -5,6 +5,7 @@ import com.vjh0107.barcode.framework.component.IBarcodeComponent
 import com.vjh0107.barcode.framework.component.Reloadable
 import com.vjh0107.barcode.framework.exceptions.ConstructorNotAllowedException
 import com.vjh0107.barcode.framework.utils.print
+import com.vjh0107.barcode.framework.utils.uncheckedCast
 import com.vjh0107.barcode.framework.utils.uncheckedNonnullCast
 import kotlin.jvm.internal.Reflection
 import kotlin.reflect.KClass
@@ -57,10 +58,10 @@ abstract class AbstractComponentHandler<T : IBarcodeComponent> : ComponentHandle
     private fun processAnnotations() {
         val classes: Set<Class<*>> = findTargetClasses()
 
-        for (clazz in classes) {
+        classes.forEach clazz@{ clazz ->
             for (annotation in clazz.annotations) {
                 if (annotation is BarcodeComponent) {
-                    val klass = Reflection.createKotlinClass(clazz).uncheckedNonnullCast<KClass<T>>()
+                    val klass = Reflection.createKotlinClass(clazz).uncheckedCast<KClass<T>>() ?: return@clazz
                     processAnnotation(klass)
                 }
             }

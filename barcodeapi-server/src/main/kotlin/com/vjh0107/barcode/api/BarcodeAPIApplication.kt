@@ -15,11 +15,11 @@ import org.koin.ksp.generated.module
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
-class BarcodeAPIApplication : AbstractBarcodeApplication() {
+class BarcodeAPIApplication(val args: Array<String>?) : AbstractBarcodeApplication() {
     companion object {
         @JvmStatic
         fun main(args: Array<String>?) {
-            BarcodeAPIApplication().build().start(wait = true)
+            BarcodeAPIApplication(args).build().start(wait = true)
         }
     }
 
@@ -46,14 +46,18 @@ class BarcodeAPIApplication : AbstractBarcodeApplication() {
     }
 
     override fun getDatabaseHost(): DatabaseHost {
-        val property = getConfig().config("database")
-        return with(property) {
-            val address = property("address").getString()
-            val port = property("port").getString()
-            val user = property("user").getString()
-            val password = property("password").getString()
-            val databaseName = property("databaseName").getString()
-            DatabaseHost(address, port, user, password, databaseName)
+        if (args == null) {
+            val property = getConfig().config("database")
+            return with(property) {
+                val address = property("address").getString()
+                val port = property("port").getString()
+                val user = property("user").getString()
+                val password = property("password").getString()
+                val databaseName = property("databaseName").getString()
+                DatabaseHost(address, port, user, password, databaseName)
+            }
+        } else {
+            return DatabaseHost(args[0], args[1], args[2], args[3], args[4])
         }
     }
 }

@@ -3,14 +3,14 @@ plugins {
     java
     kotlin("plugin.serialization")
     id("com.google.devtools.ksp")
-    id("com.vjh0107.barcode.buildscripts.ksp-extension")
+    id("com.vjh0107.ksp-extension")
 }
 
 group = "com.vjh0107.barcode"
 version = "1.0.0"
 
 dependencies {
-    compileOnly(Dependency.Minecraft.PAPER)
+    compileOnly(Dependency.Minecraft.PAPER_API)
     compileOnlyAll(Dependency.EXPOSED)
     compileOnly(Dependency.KotlinX.Serialization.JSON)
     compileOnly(Dependency.KotlinX.Coroutines.CORE)

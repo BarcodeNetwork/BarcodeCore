@@ -2,6 +2,13 @@
 # DO NOT TOUCH
 config-version: 8
 
+# 등급
+tier:
+  # 발광효과
+  glow: true
+  # 아이템 이름 뜨는지 여부
+  hint: true
+
 # Notifies players with the 'mmoitems.update-notify' perm node when
 # they join the server if a new update is available for download.
 # Requires /reload when changed.
@@ -144,26 +151,6 @@ gem-sockets:
     # item gem sockets if you want to create an
     # uncolored gem socket i.e a socket for any type of gem.
     uncolored: 'Uncolored'
-
-custom-blocks:
-
-    # Whether or not custom blocks should
-    # generate in the world according to
-    # their generation template.
-    enable-world-gen: false
-
-    # Whether or not to remove mushroom block drops
-    # from the droplist when mining a mushroom block
-    # with silk-touch.
-    # HIGHLY Recommended for servers that use
-    # custom blocks, as the mushroom blocks can BREAK everything.
-    replace-mushroom-drops: true
-
-# Use this option if your chat management plugin is having
-# conflicts with the MMOItems chat input feature. This will
-# bring up an anvil GUI which you can input text in instead
-# of using the chat.
-anvil-text-input: false
 
 # When set to true, players CANNOT upgrade an item if the
 # specs (level, profession requirements) the item WOULD

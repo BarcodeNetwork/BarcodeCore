@@ -18,9 +18,9 @@ group = "com.vjh0107"
 gradlePlugin {
     plugins {
         register("bukkit-executor") {
-            displayName = "BarcodeBukkitExecutor"
-            description = "Bukkit executor plugin for BarcodeNetwork"
-            id = "com.vjh0107.barcode.buildscripts.bukkit-executor"
+            displayName = "BukkitExecutor"
+            description = "Bukkit executor plugin"
+            id = "com.vjh0107.bukkit-executor"
             implementationClass = "com.vjh0107.barcode.buildscripts.bukkitexecutor.BukkitExecutorPlugin"
         }
     }

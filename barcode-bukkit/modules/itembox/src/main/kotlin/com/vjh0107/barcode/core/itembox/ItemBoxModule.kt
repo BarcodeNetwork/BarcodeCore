@@ -15,8 +15,6 @@ import org.koin.ksp.generated.module
 @ComponentScan
 @BarcodeComponent
 class ItemBoxModule : BarcodeRegistrable, KoinComponent {
-    override val id: String get() = "BarcodeCore.ItemBox"
-
     override fun onLoad() {
         getKoin().loadModules(listOf(module))
     }

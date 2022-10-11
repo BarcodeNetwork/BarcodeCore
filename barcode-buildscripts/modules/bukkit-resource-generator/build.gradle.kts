@@ -22,9 +22,9 @@ group = "com.vjh0107"
 gradlePlugin {
     plugins {
         register("bukkit-resource-generator") {
-            displayName = "BarcodeBukkitResourceGenerator"
-            description = "Bukkit resource auto generator plugin for BarcodeNetwork"
-            id = "com.vjh0107.barcode.buildscripts.bukkit-resource-generator"
+            displayName = "BukkitResourceGenerator"
+            description = "Bukkit resource auto generator plugin"
+            id = "com.vjh0107.bukkit-resource-generator"
             implementationClass = "com.vjh0107.barcode.buildscripts.resourcegenerator.BukkitResourceGeneratorPlugin"
         }
     }

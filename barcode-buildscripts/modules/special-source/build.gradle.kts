@@ -18,9 +18,9 @@ group = "com.vjh0107"
 
 gradlePlugin {
     plugins.register("special-source") {
-        displayName = "BarcodeSpecialSource"
-        description = "Spigot SpecialSource gradle plugin for BarcodeNetwork"
-        id = "com.vjh0107.barcode.buildscripts.special-source"
+        displayName = "SpecialSource"
+        description = "Spigot SpecialSource gradle plugin"
+        id = "com.vjh0107.special-source"
         implementationClass = "com.vjh0107.barcode.buildscripts.specialsource.SpecialSourcePlugin"
     }
 }

@@ -1,23 +1,0 @@
-{"skillId2_ñstr":"SkillID2"}
-{"SkillLevel1_ñint":1}
-{"isEnabled_ñbol":false}
-{"skillId_ñstr":"SkillID1"}
-:{"skills_ñlst":["skillname1","skillname2","skillname3"]}
-compressedExtension: _ñstr
-itemTagTest: SkillID2
-compressedExtension: _ñint
-itemTagTest: 1
-compressedExtension: _ñbol
-itemTagTest: false
-compressedExtension: _ñstr
-itemTagTest: SkillID1
-compressedExtension: _ñlst
-8itemTagTest: ["skillname1", "skillname2", "skillname3"]
-�decompressTagTest: [ItemTag(path=skillId2, value=SkillID2), ItemTag(path=SkillLevel1, value=1), ItemTag(path=isEnabled, value=false), ItemTag(path=skillId, value=SkillID1), ItemTag(path=skills, value=["skillname1", "skillname2", "skillname3"])]
-4ItemTag(path=pathA, value=["asdfasdf","asdfasdf2"])
-skillname1
-skillname2
-skillname3
-skillname1
-skillname2
-skillname3

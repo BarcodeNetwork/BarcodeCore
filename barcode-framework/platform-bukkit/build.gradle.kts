@@ -1,10 +1,10 @@
 plugins {
     kotlin("jvm")
     java
-    id("com.vjh0107.barcode.buildscripts.bukkit-resource-generator")
-    id("com.vjh0107.barcode.buildscripts.special-source")
-    id("com.vjh0107.barcode.buildscripts.bukkit-executor")
-    id("com.vjh0107.barcode.buildscripts.ksp-extension")
+    id("com.vjh0107.bukkit-resource-generator")
+    id("com.vjh0107.special-source")
+    id("com.vjh0107.bukkit-executor")
+    id("com.vjh0107.ksp-extension")
     id("com.google.devtools.ksp")
 
     id("com.github.johnrengelman.shadow")
@@ -52,7 +52,7 @@ barcodeTasks {
 }
 
 dependencies {
-    compileOnly(Dependency.Minecraft.PAPER)
+    compileOnly(Dependency.Minecraft.PAPER_API)
     compileOnly(Dependency.Minecraft.SPIGOT_REMAPPED)
     compileOnly(Dependency.Library.NETTY)
     compileOnly(Dependency.Minecraft.AUTH_LIB)
@@ -66,7 +66,6 @@ dependencies {
     implementation(Dependency.KotlinX.Serialization.JSON)
     implementationAll(Dependency.Ktor.CLIENT)
     implementationAll(Dependency.EXPOSED)
-    implementationAll(Dependency.GOOGLE_SHEETS)
     with(Dependency.Koin) {
         implementation(CORE)
         implementation(ANNOTATIONS)
@@ -82,11 +81,10 @@ dependencies {
     implementationModule(BarcodeModule.Framework.DATABASE)
     implementationModule(BarcodeModule.Framework.COMMON)
     implementationModule(BarcodeModule.Framework.GOOGLE_SHEETS)
-
     implementationModule(BarcodeModule.Framework.BUKKIT_COMMON)
     implementationModule(BarcodeModule.Framework.BUKKIT_V1_19_R1)
 
-    testImplementation(Dependency.Minecraft.PAPER)
+    testImplementation(Dependency.Minecraft.PAPER_API)
     testImplementation(Dependency.KotlinX.Coroutines.TEST)
     testImplementation(Dependency.Library.MOCKK)
     testImplementationAll(Dependency.KOTEST)
@@ -102,8 +100,5 @@ tasks.shadowJar {
     this.relocate("dev.jorel.commandapi", "com.vjh0107.barcode.commandapi")
     setBuildOutputDir()
     this.archiveFileName.set("barcodecore-barcodeFramework.jar")
-    include(
-        Dependency.Minecraft.KyoriAdventure.API,
-        Dependency.Minecraft.KyoriAdventure.BUKKIT,
-    )
+    includeAll(Dependency.GOOGLE_SHEETS)
 }

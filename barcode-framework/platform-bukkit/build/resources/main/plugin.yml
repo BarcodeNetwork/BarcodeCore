@@ -1,9 +1,0 @@
-name: BarcodeFramework
-version: 1.0.0
-main: com.vjh0107.barcode.framework.BarcodeFrameworkPlugin
-author: vjh0107
-api-version: 1.18
-softdepend:
- - Vault
- - HolographicDisplays
- - PlaceholderAPI

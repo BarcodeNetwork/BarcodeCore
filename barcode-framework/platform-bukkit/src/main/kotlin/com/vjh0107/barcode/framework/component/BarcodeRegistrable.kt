@@ -9,7 +9,7 @@ interface BarcodeRegistrable : IBarcodeComponent, Closeable {
     /**
      * BarcodeRegistrar 의 id, debug 용
      */
-    val id: String
+    val id: String get() = this.javaClass.simpleName
 
     /**
      * Registrar 들이 register 되기 전에 실행됨

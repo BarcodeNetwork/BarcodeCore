@@ -7,7 +7,7 @@ import com.vjh0107.barcode.framework.component.handler.BarcodeComponentHandler
 import com.vjh0107.barcode.framework.component.handler.HandlerPriority
 import kotlin.reflect.KClass
 
-@BarcodeComponentHandler(priority = HandlerPriority.LOWEST)
+@BarcodeComponentHandler(priority = HandlerPriority.REPOSITORY)
 class BarcodeRepositoryHandler<P: AbstractBarcodePlugin>(
     plugin: P
 ) : AbstractBukkitComponentHandler<P, BarcodeRepository>(plugin)  {
