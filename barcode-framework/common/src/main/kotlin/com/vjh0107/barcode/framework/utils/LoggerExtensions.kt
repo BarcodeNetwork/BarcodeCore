@@ -20,3 +20,7 @@ fun Logger.traceableLog(logLevel: Level, message: String) {
 fun Logger.traceableInfo(message: String) {
     this.traceableLog(Level.INFO, message)
 }
+
+fun Logger.traceableSevere(message: String) {
+    this.traceableLog(Level.SEVERE, message)
+}

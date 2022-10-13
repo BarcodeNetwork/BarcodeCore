@@ -8,7 +8,8 @@ group = "com.vjh0107"
 version = "1.0.0"
 
 dependencies {
-    compileOnly(Dependency.KotlinX.Serialization.JSON)
+    implementation(Dependency.KotlinX.Serialization.JSON)
+    implementation(Dependency.Library.KOTLIN_REFLECT)
     testImplementationAll(Dependency.KOTEST)
 }
 

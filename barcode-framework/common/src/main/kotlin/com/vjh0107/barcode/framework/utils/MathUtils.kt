@@ -15,6 +15,10 @@ fun atan2toAngle (x: Double, y: Double): Double {
     return (atan2(y, x) *180)/ PI
 }
 
+/**
+ * 이거 진짜 편합니다. 진짜로요.
+ * null 을 0 으로 바꿔줍니다.
+ */
 fun Double?.nullToZero() : Double {
     return this ?: 0.0
 }

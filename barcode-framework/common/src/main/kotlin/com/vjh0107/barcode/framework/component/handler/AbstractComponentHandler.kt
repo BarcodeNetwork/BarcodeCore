@@ -1,24 +1,28 @@
 package com.vjh0107.barcode.framework.component.handler
 
-import com.vjh0107.barcode.framework.component.BarcodeComponent
-import com.vjh0107.barcode.framework.component.IBarcodeComponent
-import com.vjh0107.barcode.framework.component.Reloadable
+import com.vjh0107.barcode.framework.component.*
+import com.vjh0107.barcode.framework.component.defaultComponentOrder
 import com.vjh0107.barcode.framework.exceptions.ConstructorNotAllowedException
-import com.vjh0107.barcode.framework.utils.print
 import com.vjh0107.barcode.framework.utils.uncheckedCast
-import com.vjh0107.barcode.framework.utils.uncheckedNonnullCast
 import kotlin.jvm.internal.Reflection
 import kotlin.reflect.KClass
+import kotlin.reflect.full.findAnnotation
 
 abstract class AbstractComponentHandler<T : IBarcodeComponent> : ComponentHandler {
-    private val componentClasses: MutableSet<KClass<T>> = mutableSetOf()
+    private val componentClasses: MutableMap<Int, MutableList<KClass<T>>> = mutableMapOf()
     private val instances: MutableSet<T> = mutableSetOf()
 
     /**
      * 컴포넌트를 register 합니다.
      */
-    fun registerComponent(clazz: KClass<T>) {
-        componentClasses.add(clazz)
+    protected fun registerComponent(clazz: KClass<T>) {
+        val order = clazz.findAnnotation<BarcodeComponentOrder>()?.order ?: defaultComponentOrder
+        val componentList = componentClasses[order]
+        if (componentList == null) {
+            componentClasses[order] = mutableListOf(clazz)
+        } else {
+            componentList.add(clazz)
+        }
     }
 
     /**
@@ -71,10 +75,12 @@ abstract class AbstractComponentHandler<T : IBarcodeComponent> : ComponentHandle
     // #2
     private fun createInstances() {
         try {
-            componentClasses.forEach clazz@{ clazz ->
-                val instance = createInstance(clazz)
-                onInstanceCreated(instance)
-                instances.add(instance)
+            componentClasses.toSortedMap().forEach { (_, classList) ->
+                classList.forEach { clazz ->
+                    val instance = createInstance(clazz)
+                    onInstanceCreated(instance)
+                    instances.add(instance)
+                }
             }
         } catch (exception: NoSuchMethodException) {
             exception.printStackTrace()

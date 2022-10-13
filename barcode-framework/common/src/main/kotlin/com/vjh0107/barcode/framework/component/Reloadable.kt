@@ -5,6 +5,6 @@ package com.vjh0107.barcode.framework.component
  * close() 후 load() 가 된다.
  */
 interface Reloadable {
-    fun load()
-    fun close()
+    fun load() {}
+    fun close() {}
 }
