@@ -1,10 +1,12 @@
 plugins {
     id("com.gradle.plugin-publish") version "1.0.0"
+    // id("com.github.johnrengelman.shadow") version "7.1.2" apply false
 }
 
 subprojects {
     repositories {
         mavenCentral()
+        maven("https://www.jitpack.io")
     }
 }
 
@@ -25,11 +27,3 @@ file(rootProject.projectDir.path + "/publish.gradle.kts").let {
         }
     }
 }
-
-pluginBundle {
-    website = "https://github.com/BarcodeNetwork/BarcodeCore"
-    vcsUrl = "https://github.com/BarcodeNetwork/BarcodeCore"
-    description = project.description
-    tags = listOf("bukkit", "bungee", "nukkit")
-}
-
